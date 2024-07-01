@@ -25,7 +25,6 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-  const displayLimit = 6;
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
