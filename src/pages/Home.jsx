@@ -34,7 +34,7 @@ const Home = () => {
         </Spinner>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-          {products.slice(0, displayLimit).map((product, index) => (
+          {products.map((product, index) => (
             <Card key={index} style={{ width: '18rem', height: '100%', margin: '1rem' }}>
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
