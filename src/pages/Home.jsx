@@ -25,28 +25,29 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      {loading ? (
-        <Spinner animation="border" role="status" style={{ fontSize: '2rem' }}>
-          <span className="sr-only" style={{fontWeight: "bold"}}>Loading...</span>
-        </Spinner>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-          {products.map((product, index) => (
-            <Card key={index} style={{ width: '18rem', height: '100%', margin: '1rem' }}>
-              <Card.Img variant="top" src={product.image} />
-              <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Link to={`/blogs/${product.id}`}>
-                  <Button variant="primary">Go to details</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      )}
+    <div>
+      <div style={{ minHeight: 'calc(100vh - 120px)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {loading ? (
+          <Spinner animation="border" role="status" style={{ fontSize: '2rem' }}>
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {products.map((product, index) => (
+              <Card key={index} style={{ width: '18rem', height: '100%', margin: '1rem' }}>
+                <Card.Img variant="top" src={product.image} />
+                <Card.Body>
+                  <Card.Title>{product.title}</Card.Title>
+                  <Link to={`/products/${product.id}`}>
+                    <Button variant="primary">Go to details</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
