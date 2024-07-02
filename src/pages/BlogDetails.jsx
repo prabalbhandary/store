@@ -51,7 +51,7 @@ const BlogDetails = () => {
       <Card>
         <Row noGutters>
           <Col md={4}>
-            <Card.Img src={blog?.image} /> {/* Optional chaining for safe access */}
+            <Card.Img src={blog?.image} />
           </Col>
           <Col md={8}>
             <Card.Body>

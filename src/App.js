@@ -9,7 +9,7 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import BlogDetails from './pages/BlogDetails'; // Ensure this import is correct
+import BlogDetails from './pages/BlogDetails';
 import Cart from './pages/Cart';
 
 const App = () => {
